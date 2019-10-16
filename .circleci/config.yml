@@ -40,8 +40,8 @@ jobs:
           at: ~/repo
       - run:
           name: Set registry URL
-          command: npm set registry https://npm.fury.io/bethreid/
-      - run:
+	  npm config set registry https://npm.fury.io/bethreid/      
+	- run:
           name: Authenticate with registry
           command: echo "//npm.fury.io/bethreid/:_authToken=$GEM_TOKEN" > ~/repo/.npmrc
       - run:
